@@ -1,0 +1,58 @@
+@import "../../../utils/font-awesome/fontawesome.scss";
+@import "../../../utils/font-awesome/solid.scss";
+@import "../../../utils/font-awesome/larger";
+
+
+.results {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 200vh;
+    min-height: 60vh;
+}
+
+.resultsDiv{
+    margin-top: 50px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark {
+    color: white;
+}
+
+.light {
+    color:#6809E1;
+}
+
+.results.dark {
+    background-color: #6363638a;
+}
+
+.results.light {
+    background-color: lightgray;
+}
+
+.noData {
+    margin-top: 30px;
+}
+
+
+.loader {
+  margin-top: 80px;
+}
+.spinner {
+  @extend %fa-icon;
+  @extend .fas;
+  @extend .fa-spinner;
+  @extend .fa-4x;
+  @extend .fa-spin;
+  &:before {
+    content: fa-content($fa-var-spinner);
+  }
+}

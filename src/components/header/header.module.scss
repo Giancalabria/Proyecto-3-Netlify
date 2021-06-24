@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.button {
+    width: 148px;
+    height: 43px;
+    border-radius: 61px;
+}
+
+.darkButton {
+    color: white;
+    border: 1px solid white;
+}
+.lightButton {
+    color:#6809E1;
+    border: #6809E1 1px solid;
+}
+
+.dark {
+    border: 1px solid white;
+    color: white;
+}
+
+.light{
+    border: 1px solid #6809E1;
+    color: #6809E1;
+}
+
+.logo{
+    max-width: 50px;
+    max-height: 50px;
+}

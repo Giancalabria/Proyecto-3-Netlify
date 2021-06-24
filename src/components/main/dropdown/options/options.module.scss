@@ -1,0 +1,21 @@
+.option {
+    padding: 20px 50px;
+    border-bottom: 1px rgb(175, 175, 175) solid;
+}
+.option:last-child {
+    padding-bottom: 30px;
+    border-radius: 0px 0px 61px 61px;
+    border-bottom: 0px;
+}
+
+.darkBack:hover {
+    background-color: #929292;
+    cursor: pointer;
+}
+
+.lightBack:hover {
+    background-color: rgb(202, 202, 202);
+    cursor: pointer;
+}
+
+

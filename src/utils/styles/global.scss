@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import './theme';
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font-family-primary;
+	margin: 0;
+	overscroll-behavior: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	display: block;
+	font-family: $font-family-primary;
+	text-decoration: none;
+	text-align: center;
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+input {
+	padding: 0;
+	outline: none;
+	border: none;
+}
+
+select,
+option,
+span,
+button,
+input,
+label,
+li,
+p,
+h6,
+h5,
+h4,
+h3 {
+	font-family: $font-family-primary;
+}
+
+h2,
+h1 {
+	font-family: $font-family-primary;
+}
+
+p,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+	user-select: none;
+}
+
+pre,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	background: transparent;
+	border: 0;
+	outline: 0;
+}
+
+#root {
+	min-height: 100vh;
+}

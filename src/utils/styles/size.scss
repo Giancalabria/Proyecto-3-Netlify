@@ -1,0 +1,4 @@
+@mixin size($height: auto, $width: $height) {
+	height: $height;
+	width: $width;
+}
