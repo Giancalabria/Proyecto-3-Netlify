@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { Results } from './results/results'
 import { Filter } from './filter/filter'
@@ -6,6 +6,7 @@ import styles from './main.module.scss'
 import people from '../../assets/svg/ilustra_header.svg'
 import { Dropdown } from './dropdown/dropdown'
 import { Delete } from './delete/delete'
+import { ThemeContext } from '../../utils/styles/theme-context'
 export const Main = () => {
 	const [isLoading, setIsLoading] = useState(false)
 	const [isError, setIsError] = useState(false)
@@ -13,7 +14,7 @@ export const Main = () => {
 	const [search, setSearch] = useState('')
 	const [isSearching, setIsSearching] = useState(false)
 	const [showOptions, setShowOptions] = useState(false)
-
+	const { darkMode } = useContext(ThemeContext)
 	useEffect(() => {
 		const fetchData = async () => {
 			setIsLoading(true)
@@ -44,6 +45,12 @@ export const Main = () => {
 
 	return (
 		<div className={styles.main}>
+			<h1
+				className={`${darkMode ? styles.dark : styles.light}  ${styles.title}`}
+			>
+				¡Inspirate y busca los mejores{' '}
+				<span className={styles.span}>GIFS!</span>
+			</h1>
 			<Delete setSearch={setSearch} setIsSearching={setIsSearching} />
 			<img src={people} />
 			<Filter
