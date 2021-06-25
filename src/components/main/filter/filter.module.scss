@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: center;
 }
 
 .input {
@@ -22,20 +23,24 @@
     border: 1px solid #373737;
     color: #373737;
     border-radius: 40px 0px 0px 0px;
+    border-right: 0px;
 }
 .input.notShowOptions.light {
     background-color: white;
     border: 1px solid #373737;
     color: #373737;
     border-radius: 61px 0px 0px 61px;
+    border-right: 0px;
 }
 
 
 .searchbutton.notShowOptions.light {
+    border: 1px solid #373737;
     border-radius: 0px 61px 61px 0px;
 }
 
 .searchbutton.showOptions.light {
+    border: 1px solid #373737;
     border-radius: 0px 40px 0px 0px;
 }
 
@@ -44,12 +49,14 @@
     border: 1px solid #FFFFFF;
     color: white;
     border-radius: 40px 0px 0px 0px;
+    border-right: 0px;
 }
 .input.notShowOptions.dark {
     background-color: #373737;
     border: 1px solid #FFFFFF;
     color: white;
     border-radius: 61px 0px 0px 61px;
+    border-right: 0px;
 }
 
 

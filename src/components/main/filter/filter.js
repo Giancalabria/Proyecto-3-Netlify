@@ -3,7 +3,7 @@ import styles from './filter.module.scss'
 import lupa from '../../../assets/svg/icon-search-mod-noc.svg'
 import { ThemeContext } from '../../../utils/styles/theme-context'
 import PropTypes from 'prop-types'
-
+import { Delete } from './delete/delete'
 export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 	const { darkMode } = useContext(ThemeContext)
 	const check = () => {
@@ -35,6 +35,7 @@ export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 				}}
 				onKeyDown={enterSearch}
 			/>
+			<Delete setIsSearching={setIsSearching} setSearch={setSearch} />
 			<button
 				className={`${darkMode ? styles.dark : styles.light}  ${
 					styles.searchbutton
