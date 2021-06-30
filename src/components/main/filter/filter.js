@@ -13,7 +13,7 @@ export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 	}
 	const enterSearch = (e) => {
 		let keycode = e.keyCode
-		if (keycode === 13) {
+		if (keycode === 13 || e.wich === 13) {
 			setIsSearching(true)
 			if (search.length === 0) {
 				alert('Por favor, ingrese algo antes de buscar')
