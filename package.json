@@ -1,6 +1,7 @@
 {
-	"name": "uwu",
+	"name": "proyecto3-netlify",
 	"version": "0.1.0",
+	"homepage": "http://Giancalabria.github.io/Proyecto-3-Netlify",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.11.4",
@@ -17,6 +18,8 @@
 		"react-scripts": "4.0.3"
 	},
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
@@ -43,6 +46,7 @@
 	"devDependencies": {
 		"eslint": "^7.28.0",
 		"eslint-plugin-react": "^7.24.0",
+		"gh-pages": "^3.2.3",
 		"stylelint": "^13.13.1",
 		"stylelint-prettier": "^1.2.0"
 	}
