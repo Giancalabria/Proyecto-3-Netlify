@@ -11,8 +11,6 @@
 # production
 /build
 
-#key
-key.js
 
 # misc
 .DS_Store
