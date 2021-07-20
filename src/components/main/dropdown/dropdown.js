@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { Options } from './options/options'
 import { ThemeContext } from '../../../utils/styles/theme-context'
+import { key } from '../../key'
 import PropTypes from 'prop-types'
 export const Dropdown = ({
 	setShowOptions,
@@ -36,7 +37,7 @@ export const Dropdown = ({
 					'https://api.giphy.com/v1/gifs/search/tags',
 					{
 						params: {
-							api_key: 'U3zIbRUTsVI6h4u6FjZbmkXplVGP5Plt',
+							api_key: { key },
 							limit: '4',
 							q: search,
 						},

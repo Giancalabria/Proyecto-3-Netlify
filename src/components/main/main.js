@@ -6,6 +6,7 @@ import styles from './main.module.scss'
 import people from '../../assets/svg/ilustra_header.svg'
 import { Dropdown } from './dropdown/dropdown'
 import { ThemeContext } from '../../utils/styles/theme-context'
+import { key } from '../../key'
 export const Main = () => {
 	const [isLoading, setIsLoading] = useState(false)
 	const [isError, setIsError] = useState(false)
@@ -23,7 +24,7 @@ export const Main = () => {
 					'https://api.giphy.com/v1/gifs/search',
 					{
 						params: {
-							api_key: 'U3zIbRUTsVI6h4u6FjZbmkXplVGP5Plt',
+							api_key: { key },
 							limit: '15',
 							q: search,
 						},
