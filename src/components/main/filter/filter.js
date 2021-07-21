@@ -35,7 +35,15 @@ export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 				}}
 				onKeyDown={enterSearch}
 			/>
-			<Delete setIsSearching={setIsSearching} setSearch={setSearch} />
+			{search.length > 0 ? (
+				<Delete setIsSearching={setIsSearching} setSearch={setSearch} />
+			) : (
+				<div
+					className={`${darkMode ? styles.dark : styles.light}  ${
+						styles.temporal
+					}`}
+				></div>
+			)}
 			<button
 				className={`${darkMode ? styles.dark : styles.light}  ${
 					styles.searchbutton
