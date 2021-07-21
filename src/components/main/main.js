@@ -14,17 +14,19 @@ export const Main = () => {
 	const [search, setSearch] = useState('')
 	const [isSearching, setIsSearching] = useState(false)
 	const [showOptions, setShowOptions] = useState(false)
+
 	const { darkMode } = useContext(ThemeContext)
 	useEffect(() => {
 		const fetchData = async () => {
 			setIsLoading(true)
 			setIsError(false)
+
 			try {
 				const fetchedData = await axios(
 					'https://api.giphy.com/v1/gifs/search',
 					{
 						params: {
-							api_key: { key },
+							api_key: key,
 							limit: '15',
 							q: search,
 						},
