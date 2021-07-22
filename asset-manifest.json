@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Proyecto-3-Netlify/static/css/main.09554410.chunk.css",
-    "main.js": "/Proyecto-3-Netlify/static/js/main.45272588.chunk.js",
-    "main.js.map": "/Proyecto-3-Netlify/static/js/main.45272588.chunk.js.map",
-    "runtime-main.js": "/Proyecto-3-Netlify/static/js/runtime-main.2b4de50f.js",
-    "runtime-main.js.map": "/Proyecto-3-Netlify/static/js/runtime-main.2b4de50f.js.map",
-    "static/js/2.4fc65e28.chunk.js": "/Proyecto-3-Netlify/static/js/2.4fc65e28.chunk.js",
-    "static/js/2.4fc65e28.chunk.js.map": "/Proyecto-3-Netlify/static/js/2.4fc65e28.chunk.js.map",
+    "main.css": "/Proyecto-3-Netlify/static/css/main.4eb917c8.chunk.css",
+    "main.js": "/Proyecto-3-Netlify/static/js/main.bdfb3229.chunk.js",
+    "main.js.map": "/Proyecto-3-Netlify/static/js/main.bdfb3229.chunk.js.map",
+    "runtime-main.js": "/Proyecto-3-Netlify/static/js/runtime-main.e21acc63.js",
+    "runtime-main.js.map": "/Proyecto-3-Netlify/static/js/runtime-main.e21acc63.js.map",
+    "static/js/2.9beeb7c6.chunk.js": "/Proyecto-3-Netlify/static/js/2.9beeb7c6.chunk.js",
+    "static/js/2.9beeb7c6.chunk.js.map": "/Proyecto-3-Netlify/static/js/2.9beeb7c6.chunk.js.map",
     "index.html": "/Proyecto-3-Netlify/index.html",
-    "static/css/main.09554410.chunk.css.map": "/Proyecto-3-Netlify/static/css/main.09554410.chunk.css.map",
-    "static/js/2.4fc65e28.chunk.js.LICENSE.txt": "/Proyecto-3-Netlify/static/js/2.4fc65e28.chunk.js.LICENSE.txt",
+    "static/css/main.4eb917c8.chunk.css.map": "/Proyecto-3-Netlify/static/css/main.4eb917c8.chunk.css.map",
+    "static/js/2.9beeb7c6.chunk.js.LICENSE.txt": "/Proyecto-3-Netlify/static/js/2.9beeb7c6.chunk.js.LICENSE.txt",
     "static/media/results.module.scss": "/Proyecto-3-Netlify/static/media/fa-solid-900.efbd5d20.eot",
     "static/media/icon-search-mod-noc.ecc2b197.svg": "/Proyecto-3-Netlify/static/media/icon-search-mod-noc.ecc2b197.svg",
     "static/media/ilustra_header.9d4669b1.svg": "/Proyecto-3-Netlify/static/media/ilustra_header.9d4669b1.svg",
@@ -18,9 +18,9 @@
     "static/media/tacho.5ab49a47.svg": "/Proyecto-3-Netlify/static/media/tacho.5ab49a47.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b4de50f.js",
-    "static/js/2.4fc65e28.chunk.js",
-    "static/css/main.09554410.chunk.css",
-    "static/js/main.45272588.chunk.js"
+    "static/js/runtime-main.e21acc63.js",
+    "static/js/2.9beeb7c6.chunk.js",
+    "static/css/main.4eb917c8.chunk.css",
+    "static/js/main.bdfb3229.chunk.js"
   ]
 }
