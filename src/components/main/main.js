@@ -20,7 +20,6 @@ export const Main = () => {
 		const fetchData = async () => {
 			setIsLoading(true)
 			setIsError(false)
-
 			try {
 				const fetchedData = await axios(
 					'https://api.giphy.com/v1/gifs/search',

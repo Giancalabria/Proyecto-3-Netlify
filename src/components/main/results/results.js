@@ -44,7 +44,7 @@ export const Results = ({ data, isLoading }) => {
 							styles.noData
 						}`}
 					>
-						Ingrese su búsqueda para ver los resultados
+						No se han encontrado resultados
 					</h3>
 				)}
 			</div>
