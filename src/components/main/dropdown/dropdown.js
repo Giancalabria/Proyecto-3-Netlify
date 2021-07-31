@@ -6,18 +6,18 @@ import { ThemeContext } from '../../../utils/styles/theme-context'
 import { key } from '../../../key'
 import PropTypes from 'prop-types'
 export const Dropdown = ({
-	setShowOptions,
+	handleShowOptions,
 	search,
-	setIsSearching,
+	handleIsSearching,
 	showOptions,
-	setSearch,
+	handleSearch,
 }) => {
 	const [data, setData] = useState([])
 	const { darkMode } = useContext(ThemeContext)
 	const mappedOptions =
 		data.length > 0 ? (
 			data.map((objeto, index) => (
-				<Options key={index} tag={objeto.name} setSearch={setSearch} />
+				<Options key={index} tag={objeto.name} handleSearch={handleSearch} />
 			))
 		) : (
 			<Options error='No se han encontrado sugerencias de búsqueda' />
@@ -25,9 +25,9 @@ export const Dropdown = ({
 
 	useEffect(() => {
 		if (search > 0) {
-			setShowOptions(false)
+			handleShowOptions(false)
 		} else {
-			setShowOptions(true)
+			handleShowOptions(true)
 		}
 	}, [search])
 	useEffect(() => {
@@ -59,8 +59,8 @@ export const Dropdown = ({
 				search.length > 0 && showOptions ? styles.visible : styles.invisible
 			} `}
 			onClick={() => {
-				setIsSearching(true)
-				setShowOptions(false)
+				handleIsSearching(true)
+				handleShowOptions(false)
 			}}
 		>
 			{mappedOptions}
@@ -69,9 +69,9 @@ export const Dropdown = ({
 }
 
 Dropdown.propTypes = {
-	setShowOptions: PropTypes.func,
+	handleShowOptions: PropTypes.func,
 	search: PropTypes.string,
-	setIsSearching: PropTypes.func,
+	handleIsSearching: PropTypes.func,
 	showOptions: PropTypes.bool,
-	setSearch: PropTypes.func,
+	handleSearch: PropTypes.func,
 }

@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styles from './options.module.scss'
 import { ThemeContext } from '../../../../utils/styles/theme-context'
-export const Options = ({ tag, setSearch, error }) => {
+export const Options = ({ tag, handleSearch, error }) => {
 	const { darkMode } = useContext(ThemeContext)
 
 	if (tag) {
@@ -11,7 +11,7 @@ export const Options = ({ tag, setSearch, error }) => {
 				className={`${darkMode ? styles.darkBack : styles.lightBack}  ${
 					styles.option
 				}`}
-				onClick={() => setSearch(tag)}
+				onClick={() => handleSearch(tag)}
 			>
 				{tag}
 			</p>
@@ -31,6 +31,6 @@ export const Options = ({ tag, setSearch, error }) => {
 
 Options.propTypes = {
 	tag: PropTypes.string,
-	setSearch: PropTypes.func,
+	handleSearch: PropTypes.func,
 	error: PropTypes.string,
 }

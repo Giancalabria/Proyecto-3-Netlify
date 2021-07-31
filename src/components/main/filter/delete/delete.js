@@ -3,7 +3,7 @@ import { ThemeContext } from '../../../../utils/styles/theme-context'
 import styles from './delete.module.scss'
 import PropTypes from 'prop-types'
 import { ReactComponent as Tacho } from '../../../../assets/svg/tacho.svg'
-export const Delete = ({ setSearch, setIsSearching }) => {
+export const Delete = ({ setSearch, handleSearch }) => {
 	const { darkMode } = useContext(ThemeContext)
 	return (
 		<button
@@ -12,7 +12,7 @@ export const Delete = ({ setSearch, setIsSearching }) => {
 			}`}
 			onClick={() => {
 				setSearch('')
-				setIsSearching(true)
+				handleSearch(true)
 			}}
 		>
 			<Tacho
@@ -24,5 +24,5 @@ export const Delete = ({ setSearch, setIsSearching }) => {
 
 Delete.propTypes = {
 	setSearch: PropTypes.func,
-	setIsSearching: PropTypes.func,
+	handleSearch: PropTypes.func,
 }

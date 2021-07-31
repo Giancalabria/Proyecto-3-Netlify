@@ -4,7 +4,12 @@ import lupa from '../../../assets/svg/icon-search-mod-noc.svg'
 import { ThemeContext } from '../../../utils/styles/theme-context'
 import PropTypes from 'prop-types'
 import { Delete } from './delete/delete'
-export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
+export const Filter = ({
+	search,
+	handleSearch,
+	handleIsSearching,
+	showOptions,
+}) => {
 	const { darkMode } = useContext(ThemeContext)
 	const check = () => {
 		if (search.length === 0) {
@@ -14,7 +19,7 @@ export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 	const enterSearch = (e) => {
 		let keycode = e.keyCode
 		if (keycode === 13 || e.wich === 13) {
-			setIsSearching(true)
+			handleIsSearching(true)
 			if (search.length === 0) {
 				alert('Por favor, ingrese algo antes de buscar')
 			}
@@ -31,12 +36,15 @@ export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 				placeholder='Busque los mejores GIFs'
 				value={search}
 				onChange={(e) => {
-					setSearch(e.target.value)
+					handleSearch(e.target.value)
 				}}
 				onKeyDown={enterSearch}
 			/>
 			{search.length > 0 ? (
-				<Delete setIsSearching={setIsSearching} setSearch={setSearch} />
+				<Delete
+					handleIsSearching={handleIsSearching}
+					handleSearch={handleSearch}
+				/>
 			) : (
 				<div
 					className={`${darkMode ? styles.dark : styles.light}  ${
@@ -53,7 +61,7 @@ export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 						: styles.notShowOptions
 				}`}
 				onClick={() => {
-					setIsSearching(true)
+					handleIsSearching(true)
 					check()
 				}}
 			>
@@ -65,7 +73,7 @@ export const Filter = ({ search, setSearch, setIsSearching, showOptions }) => {
 
 Filter.propTypes = {
 	search: PropTypes.string,
-	setSearch: PropTypes.func,
-	setIsSearching: PropTypes.func,
+	handleSearch: PropTypes.func,
+	handleIsSearching: PropTypes.func,
 	showOptions: PropTypes.bool,
 }

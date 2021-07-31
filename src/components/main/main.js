@@ -20,22 +20,24 @@ export const Main = () => {
 		const fetchData = async () => {
 			setIsLoading(true)
 			setIsError(false)
-			try {
-				const fetchedData = await axios(
-					'https://api.giphy.com/v1/gifs/search',
-					{
-						params: {
-							api_key: key,
-							limit: '15',
-							q: search,
-						},
-					}
-				)
-				setData(fetchedData.data.data)
-			} catch (err) {
-				setIsError(true)
-				console.log(err)
-				console.log(isError)
+			if (isSearching) {
+				try {
+					const fetchedData = await axios(
+						'https://api.giphy.com/v1/gifs/search',
+						{
+							params: {
+								api_key: key,
+								limit: '12',
+								q: search,
+							},
+						}
+					)
+					setData(fetchedData.data.data)
+				} catch (err) {
+					setIsError(true)
+					console.log(err)
+					console.log(isError)
+				}
 			}
 			setIsLoading(false)
 			setIsSearching(false)
@@ -44,6 +46,17 @@ export const Main = () => {
 		fetchData()
 	}, [isSearching])
 
+	const handleIsSearching = (value) => {
+		setIsSearching(value)
+	}
+
+	const handleShowOptions = (value) => {
+		setShowOptions(value)
+	}
+
+	const handleSearch = (value) => {
+		setSearch(value)
+	}
 	return (
 		<div className={styles.main}>
 			<h1
@@ -55,17 +68,17 @@ export const Main = () => {
 			<img src={people} />
 			<Filter
 				search={search}
-				setSearch={setSearch}
-				setIsSearching={setIsSearching}
+				handleSearch={handleSearch}
+				handleIsSearching={handleIsSearching}
 				isSearching={isSearching}
 				showOptions={showOptions}
 			/>
 			<Dropdown
 				showOptions={showOptions}
-				setShowOptions={setShowOptions}
-				setIsSearching={setIsSearching}
+				handleShowOptions={handleShowOptions}
+				handleIsSearching={handleIsSearching}
 				search={search}
-				setSearch={setSearch}
+				handleSearch={handleSearch}
 			/>
 			<Results isLoading={isLoading} data={data} />
 		</div>
